@@ -1,4 +1,4 @@
-namespace ProjectName
+namespace Bakery
 {
   public class ClassName
   {
