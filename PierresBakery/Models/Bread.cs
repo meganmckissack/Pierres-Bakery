@@ -5,12 +5,13 @@ namespace Bakery
   public class Bread
   {
     public string BreadType { get; set; }
-    public int Cost { get; }
+    public int BreadCost { get; }
   
 
-    public Bread(string breadType)
+    public Bread(string breadType, int breadCost)
     {
       BreadType = breadType;
+      BreadCost = breadCost;
     }
 
   }
