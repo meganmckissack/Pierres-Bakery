@@ -10,7 +10,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadClass_CreatesInstanceOfBread_Bread()
     {
-      Bread newBreadOrder = new Bread("testBreadType", 3, 5);
+      Bread newBreadOrder = new Bread("testBreadType", 3);
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
 
@@ -18,9 +18,8 @@ namespace Bakery.Tests
     public void GetBreadType_ReturnBreadType_String()
     {
       string breadType = "Challah";
-      int breadCost = 5;
       int breadQuantity = 3;
-      Bread newBreadOrder = new Bread(breadType, breadQuantity, breadCost);
+      Bread newBreadOrder = new Bread(breadType, breadQuantity);
       string result = newBreadOrder.BreadType;
       Assert.AreEqual(breadType, result);
     }
@@ -29,9 +28,8 @@ namespace Bakery.Tests
     public void SetBreadType_SetBreadTypeInput_String()
     {
       string breadType = "Challah";
-      int breadCost = 5;
       int breadQuantity = 3;
-      Bread newBreadOrder = new Bread(breadType, breadQuantity, breadCost);
+      Bread newBreadOrder = new Bread(breadType, breadQuantity);
       string updateBreadType = "Focaccia";
       newBreadOrder.BreadType = updateBreadType;
       string result = newBreadOrder.BreadType;
@@ -40,23 +38,11 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void GetBreadCost_ReturnBreadCost_Int()
-    {
-      string breadType = "Challah";
-      int breadCost = 5;
-      int breadQuantity = 3;
-      Bread newBreadOrder = new Bread(breadType, breadQuantity, breadCost);
-      int result = newBreadOrder.BreadCost;
-      Assert.AreEqual(breadCost, result);
-    }
-
-    [TestMethod]
     public void GetBreadQuantity_ReturnBreadQuantity_Int()
     {
       string breadType = "Challah";
-      int breadCost = 5;
       int breadQuantity = 3;
-      Bread newBreadOrder = new Bread(breadType, breadQuantity, breadCost);
+      Bread newBreadOrder = new Bread(breadType, breadQuantity);
       int result = newBreadOrder.BreadQuantity;
       Assert.AreEqual(breadQuantity, result);
     }
@@ -65,13 +51,13 @@ namespace Bakery.Tests
     public void SetBreadQuantity_SetBreadQuantity_Int()
     {
       string breadType = "Challah";
-      int breadCost = 5;
       int breadQuantity = 3;
-      Bread newBreadOrder = new Bread(breadType, breadQuantity, breadCost);
+      Bread newBreadOrder = new Bread(breadType, breadQuantity);
       int updateBreadQuantity = 7;
       newBreadOrder.BreadQuantity = updateBreadQuantity;
       int result = newBreadOrder.BreadQuantity;
       Assert.AreEqual(updateBreadQuantity, result);
     }
+
   }
 }
