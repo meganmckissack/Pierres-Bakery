@@ -10,8 +10,17 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadClass_CreatesInstanceOfBread_Bread()
     {
-      Bread newBreadOrder = new Bread();
+      Bread newBreadOrder = new Bread("testBreadType");
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
+    }
+
+    [TestMethod]
+    public void GetBreadType_ReturnBreadType_String()
+    {
+      string breadType = "Challah";
+      Bread newBreadOrder = new Bread(breadType);
+      string result = newBreadOrder.BreadType;
+      Assert.AreEqual(breadType, result);
     }
   }
 }
