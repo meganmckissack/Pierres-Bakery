@@ -10,7 +10,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadClass_CreatesInstanceOfBread_Bread()
     {
-      Bread newBreadOrder = new Bread("testBreadType", 5, 3);
+      Bread newBreadOrder = new Bread("testBreadType", 3, 5);
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
 
@@ -20,7 +20,7 @@ namespace Bakery.Tests
       string breadType = "Challah";
       int breadCost = 5;
       int breadQuantity = 3;
-      Bread newBreadOrder = new Bread(breadType, breadCost, breadQuantity);
+      Bread newBreadOrder = new Bread(breadType, breadQuantity, breadCost);
       string result = newBreadOrder.BreadType;
       Assert.AreEqual(breadType, result);
     }
@@ -31,7 +31,7 @@ namespace Bakery.Tests
       string breadType = "Challah";
       int breadCost = 5;
       int breadQuantity = 3;
-      Bread newBreadOrder = new Bread(breadType, breadCost, breadQuantity);
+      Bread newBreadOrder = new Bread(breadType, breadQuantity, breadCost);
       string updateBreadType = "Focaccia";
       newBreadOrder.BreadType = updateBreadType;
       string result = newBreadOrder.BreadType;
@@ -45,7 +45,7 @@ namespace Bakery.Tests
       string breadType = "Challah";
       int breadCost = 5;
       int breadQuantity = 3;
-      Bread newBreadOrder = new Bread(breadType, breadCost, breadQuantity);
+      Bread newBreadOrder = new Bread(breadType, breadQuantity, breadCost);
       int result = newBreadOrder.BreadCost;
       Assert.AreEqual(breadCost, result);
     }
@@ -56,7 +56,7 @@ namespace Bakery.Tests
       string breadType = "Challah";
       int breadCost = 5;
       int breadQuantity = 3;
-      Bread newBreadOrder = new Bread(breadType, breadCost, breadQuantity);
+      Bread newBreadOrder = new Bread(breadType, breadQuantity, breadCost);
       int result = newBreadOrder.BreadQuantity;
       Assert.AreEqual(breadQuantity, result);
     }
@@ -67,7 +67,7 @@ namespace Bakery.Tests
       string breadType = "Challah";
       int breadCost = 5;
       int breadQuantity = 3;
-      Bread newBreadOrder = new Bread(breadType, breadCost, breadQuantity);
+      Bread newBreadOrder = new Bread(breadType, breadQuantity, breadCost);
       int updateBreadQuantity = 7;
       newBreadOrder.BreadQuantity = updateBreadQuantity;
       int result = newBreadOrder.BreadQuantity;

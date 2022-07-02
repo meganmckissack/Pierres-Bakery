@@ -9,11 +9,11 @@ namespace Bakery
     public int BreadCost { get; }
   
 
-    public Bread(string breadType, int breadCost, int breadQuantity)
+    public Bread(string breadType, int breadQuantity, int breadCost)
     {
       BreadType = breadType;
-      BreadCost = breadCost;
       BreadQuantity = breadQuantity;
+      BreadCost = breadCost;
     }
 
   }
