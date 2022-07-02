@@ -1,7 +1,10 @@
+using System;
+
 namespace Bakery
 {
   public class Bread
   {
-    // properties, constructors, methods, go here
+    public string BreadType { get; set; }
+    public int Cost { get; }
   }
 }
