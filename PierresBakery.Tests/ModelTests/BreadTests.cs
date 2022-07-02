@@ -22,5 +22,17 @@ namespace Bakery.Tests
       string result = newBreadOrder.BreadType;
       Assert.AreEqual(breadType, result);
     }
+
+    [TestMethod]
+    public void SetBreadType_SetBreadTypeInput_String()
+    {
+      string breadType = "Challah";
+      Bread newBreadOrder = new Bread(breadType);
+      string updateBreadType = "Focaccia";
+      newBreadOrder.BreadType = updateBreadType;
+      string result = newBreadOrder.BreadType;
+      Assert.AreEqual(updateBreadType, result);
+
+    }
   }
 }
