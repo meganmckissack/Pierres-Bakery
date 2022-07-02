@@ -1,6 +1,6 @@
 namespace Bakery
 {
-  public class ClassName
+  public class Bread
   {
     // properties, constructors, methods, go here
   }
