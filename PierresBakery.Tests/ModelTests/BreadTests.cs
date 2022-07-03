@@ -59,5 +59,15 @@ namespace Bakery.Tests
       Assert.AreEqual(updateBreadQuantity, result);
     }
 
+    [TestMethod]
+    public void CalculateBreadCost_GetBreadCost_Int()
+    {
+      string breadType = "Challah";
+      int breadQuantity = 7;
+      Bread newBreadOrder = new Bread(breadType, breadQuantity);
+      int result = newBreadOrder.CalculateBreadCost(breadQuantity);
+      Assert.AreEqual(25, result);
+    }
+
   }
 }
