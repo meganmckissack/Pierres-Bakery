@@ -10,7 +10,8 @@ namespace Bakery.Tests
     [TestMethod]
     public void PastryClass_CreatesInstanceOfPastry_Pastry()
     {
-      Pastry newPastryOrder = new Pastry("test pastry");
+      int pastryQuantity = 5;
+      Pastry newPastryOrder = new Pastry("test pastry", pastryQuantity);
       Assert.AreEqual(typeof(Pastry), newPastryOrder.GetType());
     }
 
@@ -18,7 +19,8 @@ namespace Bakery.Tests
     public void GetPastryType_ReturnPastryType_String()
     {
       string pastryType = "Croissant";
-      Pastry newPastryOrder = new Pastry(pastryType);
+      int pastryQuantity = 5;
+      Pastry newPastryOrder = new Pastry(pastryType, pastryQuantity);
       string result = newPastryOrder.PastryType;
       Assert.AreEqual(pastryType, result);
     }
@@ -27,11 +29,22 @@ namespace Bakery.Tests
     public void SetPastryType_SetPastryTypeInput_String()
     {
       string pastryType = "Croissant";
-      Pastry newPastryOrder = new Pastry(pastryType);
+      int pastryQuantity = 5;
+      Pastry newPastryOrder = new Pastry(pastryType, pastryQuantity);
       string updatePastryType = "Scone";
       newPastryOrder.PastryType = updatePastryType;
       string result = newPastryOrder.PastryType;
       Assert.AreEqual(updatePastryType, result);
+    }
+
+    [TestMethod]
+    public void GetPastryQuantity_ReturnPastryQuantity_Int()
+    {
+      string pastryType = "Croissant";
+      int pastryQuantity = 5;
+      Pastry newPastryOrder = new Pastry(pastryType, pastryQuantity);
+      int result = newPastryOrder.PastryQuantity;
+      Assert.AreEqual(pastryQuantity, result);
     }
   }
 }
