@@ -46,5 +46,17 @@ namespace Bakery.Tests
       int result = newPastryOrder.PastryQuantity;
       Assert.AreEqual(pastryQuantity, result);
     }
+
+    [TestMethod]
+    public void SetPastryQuantity_SetPastryQuantityInput_Int()
+    {
+      string pastryType = "Croissant";
+      int pastryQuantity = 5;
+      Pastry newPastryOrder = new Pastry(pastryType, pastryQuantity);
+      int updatePastryQuantity = 3;
+      newPastryOrder.PastryQuantity = updatePastryQuantity;
+      int result = newPastryOrder.PastryQuantity;
+      Assert.AreEqual(updatePastryQuantity, result);
+    }
   }
 }
