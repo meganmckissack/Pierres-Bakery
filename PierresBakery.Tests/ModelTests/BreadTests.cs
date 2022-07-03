@@ -34,7 +34,6 @@ namespace Bakery.Tests
       newBreadOrder.BreadType = updateBreadType;
       string result = newBreadOrder.BreadType;
       Assert.AreEqual(updateBreadType, result);
-
     }
 
     [TestMethod]

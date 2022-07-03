@@ -22,5 +22,16 @@ namespace Bakery.Tests
       string result = newPastryOrder.PastryType;
       Assert.AreEqual(pastryType, result);
     }
+
+    [TestMethod]
+    public void SetPastryType_SetPastryTypeInput_String()
+    {
+      string pastryType = "Croissant";
+      Pastry newPastryOrder = new Pastry(pastryType);
+      string updatePastryType = "Scone";
+      newPastryOrder.PastryType = updatePastryType;
+      string result = newPastryOrder.PastryType;
+      Assert.AreEqual(updatePastryType, result);
+    }
   }
 }
