@@ -58,5 +58,15 @@ namespace Bakery.Tests
       int result = newPastryOrder.PastryQuantity;
       Assert.AreEqual(updatePastryQuantity, result);
     }
+
+    [TestMethod]
+    public void CalculatePastryCost_GetPastryCost_Int()
+    {
+      string pastryType = "Croissant";
+      int pastryQuantity = 7;
+      Pastry newPastryOrder = new Pastry(pastryType, pastryQuantity);
+      int result = newPastryOrder.CalculatePastryCost(pastryQuantity);
+      Assert.AreEqual(12, result);
+    }
   }
 }
