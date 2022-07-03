@@ -1,7 +1,14 @@
+using System;
+
 namespace Bakery
 {
   public class Pastry
   {
-    // properties, constructors, methods, go here
+    public string PastryType { get; }
+
+    public Pastry(string pastryType)
+    {
+      PastryType = pastryType;
+    }
   }
 }
